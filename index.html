@@ -87,7 +87,7 @@ function DebateTimer() {
   const [isJuryberaad, setIsJuryberaad] = useState(false);
   const [showJuryberaadSetup, setShowJuryberaadSetup] = useState(false);
   const [juryMinutes, setJuryMinutes] = useState(15);
-  const [jurySeconds, setJurySeconds] = useState(00);
+  const [jurySeconds, setJurySeconds] = useState(0);
   const [showSettings, setShowSettings] = useState(false);
   const [showBackgroundPicker, setShowBackgroundPicker] = useState(false);
   const [customBackground, setCustomBackground] = useState(null);
@@ -133,6 +133,7 @@ function DebateTimer() {
   const buttonBg = isImageBg ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.1)';
   const buttonBgHover = isImageBg ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.15)';
   const buttonBorder = isImageBg ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)';
+  const buttonBlur = isImageBg ? 'blur(10px)' : 'none';
 
   const QUOTES = [
     { text: "Ik ben voor de stelling want NLPlan is tegen racisme.", author: "Kok Chan" },
@@ -449,6 +450,8 @@ function DebateTimer() {
         top: '1.5rem',
         right: '1.5rem',
         background: buttonBg,
+        backdropFilter: buttonBlur,
+        WebkitBackdropFilter: buttonBlur,
         border: `1px solid ${buttonBorder}`,
         borderRadius: '0.75rem',
         padding: '0.75rem',
@@ -740,6 +743,8 @@ function DebateTimer() {
                 background: isImageBg 
                   ? 'linear-gradient(145deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)'
                   : 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+                backdropFilter: buttonBlur,
+                WebkitBackdropFilter: buttonBlur,
                 border: `1px solid ${buttonBorder}`,
                 borderRadius: 'clamp(1rem, 3vw, 1.5rem)',
                 padding: 'clamp(1.5rem, 5vw, 3rem)',
@@ -801,6 +806,8 @@ function DebateTimer() {
               background: isImageBg 
                 ? 'linear-gradient(145deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)'
                 : 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: 'clamp(1rem, 3vw, 1.5rem)',
               padding: 'clamp(1.5rem, 5vw, 3rem)',
@@ -857,6 +864,8 @@ function DebateTimer() {
               background: isImageBg 
                 ? 'linear-gradient(145deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)'
                 : 'linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: 'clamp(1rem, 3vw, 1.5rem)',
               padding: 'clamp(1.5rem, 5vw, 3rem)',
@@ -939,6 +948,8 @@ function DebateTimer() {
             onClick={() => setShowCalculator(false)}
             style={{
               background: buttonBg,
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: '0.5rem',
               padding: '0.5rem 1rem',
@@ -1098,6 +1109,8 @@ function DebateTimer() {
             onClick={() => setShowJuryberaadSetup(false)}
             style={{
               background: buttonBg,
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: '0.5rem',
               padding: '0.5rem 1rem',
@@ -1271,6 +1284,8 @@ function DebateTimer() {
             onClick={goBack}
             style={{
               background: buttonBg,
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: '0.5rem',
               padding: '0.5rem 1rem',
@@ -1372,6 +1387,8 @@ function DebateTimer() {
               }}
               style={{
                 background: buttonBg,
+                backdropFilter: buttonBlur,
+                WebkitBackdropFilter: buttonBlur,
                 border: `1px solid ${buttonBorder}`,
                 borderRadius: '0.75rem',
                 padding: 'clamp(0.75rem, 2vh, 1rem) clamp(1rem, 3vw, 1.5rem)',
@@ -1599,6 +1616,8 @@ function DebateTimer() {
           onClick={goBack}
           style={{
             background: buttonBg,
+            backdropFilter: buttonBlur,
+            WebkitBackdropFilter: buttonBlur,
             border: `1px solid ${buttonBorder}`,
             borderRadius: '0.5rem',
             padding: '0.5rem 1rem',
@@ -1760,6 +1779,8 @@ function DebateTimer() {
             onClick={resetTimer}
             style={{
               background: buttonBg,
+              backdropFilter: buttonBlur,
+              WebkitBackdropFilter: buttonBlur,
               border: `1px solid ${buttonBorder}`,
               borderRadius: '0.75rem',
               padding: 'clamp(0.75rem, 2vh, 1rem) clamp(1rem, 3vw, 1.5rem)',
