@@ -1178,7 +1178,7 @@ function DebateTimer() {
               type="number"
               min="0"
               max="59"
-              value={jurySeconds}
+              value={jurySeconds.toString().padStart(2, '0')}
               onChange={(e) => setJurySeconds(Math.max(0, Math.min(59, parseInt(e.target.value) || 0)))}
               style={{
                 width: 'clamp(4rem, 15vw, 5rem)',
