@@ -1,6 +1,6 @@
 {
-  "name": "DebatUnie Debat Tool",
-  "short_name": "DebatUnie",
+  "name": "JuryApp",
+  "short_name": "JuryApp",
   "description": "Timer app voor Hogerhuis en Middenhuis debatten",
   "start_url": "./index.html",
   "display": "standalone",
